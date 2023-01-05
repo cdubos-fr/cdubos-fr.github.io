@@ -40,11 +40,7 @@ def main(content_directory: str) -> None:
             filepath = os.path.join(dir_name, file)
             mime_type, _ = mimetypes.guess_type(filepath)
             s3.BucketObject(
-                (
-                    filepath.replace(content_directory, "")
-                    .removeprefix("/")
-                    .replace(os.path.sep, "-")
-                ),
+                filepath.replace(content_directory, ""),
                 bucket=bucket.id,
                 source=pulumi.FileAsset(filepath),
                 content_type=mime_type,
