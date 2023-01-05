@@ -35,15 +35,20 @@ def main(content_directory: str) -> None:
         ),
     )
 
-    for file in os.listdir(content_directory):
-        filepath = os.path.join(content_directory, file)
-        mime_type, _ = mimetypes.guess_type(filepath)
-        s3.BucketObject(
-            file,
-            bucket=bucket.id,
-            source=pulumi.FileAsset(filepath),
-            content_type=mime_type,
-        )
+    for dir_name, _, files in os.walk(content_directory):
+        for file in files:
+            filepath = os.path.join(dir_name, file)
+            mime_type, _ = mimetypes.guess_type(filepath)
+            s3.BucketObject(
+                (
+                    filepath.replace(content_directory, "")
+                    .removeprefix("/")
+                    .replace(os.path.sep, "-")
+                ),
+                bucket=bucket.id,
+                source=pulumi.FileAsset(filepath),
+                content_type=mime_type,
+            )
 
     s3.BucketPolicy(
         "bucket-policy",
@@ -58,5 +63,5 @@ parent_directory = os.path.join(os.path.dirname(__file__), "..")
 source_directory = os.path.join(parent_directory, "source")
 build_directory = os.path.join(parent_directory, "build", "html")
 
-build.main([source_directory, parent_directory, "-b=html"])
+build.main([source_directory, build_directory, "-b=html"])
 main(build_directory)
