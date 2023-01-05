@@ -1,0 +1,34 @@
+name: Deploy to S3
+
+on:
+  push:
+    branches:
+      - main
+
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: ${{ secrets.IAM_ROLE }}
+          aws-region: eu-west-3
+      - name: Deploy to s3
+        uses: pulumi/actions@v3
+        with:
+          refresh: true
+          command: run
+          stack-name: prod
+          work-dir: iac
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: html-website-pages
+          path: |
+            build/html

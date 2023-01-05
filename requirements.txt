@@ -2,3 +2,5 @@ sphinx
 myst-parser
 furo
 sphinx-design
+pulumi
+pulumi-aws
