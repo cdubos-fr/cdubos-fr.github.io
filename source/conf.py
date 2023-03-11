@@ -4,8 +4,24 @@ copyright = "2023, Clément Dubos"
 author = "Clément Dubos"
 
 # -- Configuration -----------------------------------------------------------
-extensions = ["myst_parser", "sphinx_design"]
-myst_enable_extensions = ["colon_fence"]
+extensions = [
+    "myst_parser",
+    "sphinx_design",
+    "furo.sphinxext",
+    "sphinx.ext.autodoc",
+    "sphinx.ext.extlinks",
+    "sphinx.ext.intersphinx",
+    "sphinx.ext.mathjax",
+    "sphinx.ext.todo",
+    "sphinx.ext.viewcode",
+    # "html_image",
+    # "html_admonition",
+    "sphinx_copybutton",
+    "sphinx_inline_tabs",
+]
+myst_enable_extensions = ["colon_fence", "deflist"]
+myst_heading_anchors = 3
+
 templates_path = ["_templates"]
 exclude_patterns: list[str] = []
 language = "fr"

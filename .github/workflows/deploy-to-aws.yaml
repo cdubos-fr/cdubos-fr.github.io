@@ -1,10 +1,7 @@
-name: Deploy to S3
+name: Deploy to AWS
 
 on:
-  push:
-    branches:
-      - main
-
+  workflow_dispatch:
 
 
 jobs:
@@ -40,5 +37,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: html-website-pages
-          path: |
-            build/html
+          path: build/html

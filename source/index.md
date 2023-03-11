@@ -3,7 +3,7 @@
 :maxdepth: 2
 
 self
-cv
+cv/index
 projets
 articles
 resources

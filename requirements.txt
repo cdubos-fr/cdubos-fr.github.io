@@ -4,3 +4,5 @@ furo
 sphinx-design
 pulumi
 pulumi-aws
+sphinx-copybutton
+sphinx-inline-tabs

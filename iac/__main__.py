@@ -8,7 +8,7 @@ from pulumi_aws import s3
 from sphinx.cmd import build
 
 
-def public_read_policy_for_bucket(bucket_name):
+def public_read_policy_for_bucket(bucket_name: str) -> str:
     return json.dumps(
         {
             "Version": "2012-10-17",
@@ -22,7 +22,7 @@ def public_read_policy_for_bucket(bucket_name):
                     ],
                 }
             ],
-        }
+        },
     )
 
 
