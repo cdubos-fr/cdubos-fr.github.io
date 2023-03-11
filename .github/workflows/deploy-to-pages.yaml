@@ -24,7 +24,7 @@ jobs:
       - name: build pages
         run: |
           sphinx-build source build -b html
-          tar -cvf artifact.tar build/html/
+          tar -cvf artifact.tar build/
       - name: Archive artifact
         uses: actions/upload-artifact@v3
         with:
