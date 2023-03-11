@@ -22,14 +22,12 @@ jobs:
           cache: 'pip'
       - run: pip install -r requirements.txt
       - name: build pages
-        run: |
-          sphinx-build source build -b html
-          tar -cvf artifact.tar build/
+        run: sphinx-build source build -b html
       - name: Archive artifact
         uses: actions/upload-pages-artifact@v1.0.7
         with:
           name: github-pages
-          path: artifact.tar
+          path: build/
           retention-days: 1
       - name: Deploy pages
         uses: actions/deploy-pages@v1
