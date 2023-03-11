@@ -26,7 +26,7 @@ jobs:
           sphinx-build source build -b html
           tar -cvf artifact.tar build/
       - name: Archive artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-pages-artifact@v1.0.7
         with:
           name: github-pages
           path: artifact.tar
