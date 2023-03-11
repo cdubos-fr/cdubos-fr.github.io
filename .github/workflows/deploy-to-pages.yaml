@@ -6,14 +6,13 @@ on:
 
 jobs:
   deploy:
-
+    runs-on: ubuntu-latest
     permissions:
       pages: write      # to deploy to Pages
       id-token: write   # to verify the deployment originates from an appropriate source
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -25,8 +24,8 @@ jobs:
       - name: build pages
         run: sphinx-build source build -b html
       - name: Archive pages
-        uses: actions/upload-pages-artifact@v1.07
+        uses: actions/upload-pages-artifact@v1.0.7
         with:
           path: build/html
       - name: Deploy pages
-        uses: actions/deploy-pages
+        uses: actions/deploy-pages@v1
