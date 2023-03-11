@@ -1,6 +1,6 @@
 # Contact
 
-{far}`envelope` Adresse mail: `cledubos` `arobase` `gmail` `point` `com`
+{far}`envelope` Adresse mail: `contact` `arobase` `cdubos` `point` `fr`
 
 {fab}`github` Github: [cdubos-fr](https://github.com/cdubos-fr)
 

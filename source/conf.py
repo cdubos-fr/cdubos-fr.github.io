@@ -1,3 +1,5 @@
+import os
+
 # -- Project information -----------------------------------------------------
 project = "cdubos-vitrine"
 copyright = "2023, Clément Dubos"
@@ -14,10 +16,9 @@ extensions = [
     "sphinx.ext.mathjax",
     "sphinx.ext.todo",
     "sphinx.ext.viewcode",
-    # "html_image",
-    # "html_admonition",
     "sphinx_copybutton",
     "sphinx_inline_tabs",
+    "sphinx_favicon",
 ]
 myst_enable_extensions = ["colon_fence", "deflist"]
 myst_heading_anchors = 3
@@ -40,7 +41,7 @@ html_theme = "furo"
 html_static_path = ["_static"]
 html_show_sphinx = True
 
-html_logo = "_static/me.jpg"
+html_logo = "_static/icon.svg"
 html_title = "Clément Dubos"
 
 html_theme_options = {
@@ -57,3 +58,7 @@ html_theme_options = {
 html_css_files = [
     "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css",
 ]
+
+FAVICON_DIR = "favicon"
+
+favicons = [{"href": f"{FAVICON_DIR}/{file}"} for file in os.listdir(f"_static/{FAVICON_DIR}")]

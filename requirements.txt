@@ -6,3 +6,4 @@ pulumi
 pulumi-aws
 sphinx-copybutton
 sphinx-inline-tabs
+sphinx-favicon
