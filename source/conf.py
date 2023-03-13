@@ -19,6 +19,7 @@ extensions = [
     "sphinx_copybutton",
     "sphinx_inline_tabs",
     "sphinx_favicon",
+    "sphinx_tags",
 ]
 myst_enable_extensions = ["colon_fence", "deflist"]
 myst_heading_anchors = 3
@@ -62,3 +63,32 @@ html_css_files = [
 FAVICON_DIR = "favicon"
 
 favicons = [{"href": f"{FAVICON_DIR}/{file}"} for file in os.listdir(f"_static/{FAVICON_DIR}")]
+
+
+# -- Tags  -------------------------------------------------------------------
+tags_create_tags = True
+tags_create_badges = True
+tags_extension = ["md", "rst"]
+tags_badge_colors = {
+    "Python": "primary",
+    "GithubAction": "secondary",
+    "GitlabCI": "secondary",
+    "Pydantic": "info",
+    "Pulumi": "warning",
+    "Azure": "danger",
+    "AWS": "danger",
+    "*": "dark",
+}
+# Python, C#, Java, Jenkins, Scala, Spark, ElasticStack, GitlabCI,
+# GithubAction, Pulumi, Django, FastAPI, PostGres, Dask, Terraform, Azure,
+# AWS, Pydantic
+
+# Badges values
+# 'primary'
+# 'secondary'
+# 'success'
+# 'info'
+# 'warning'
+# 'danger'
+# 'light'
+# 'dark'

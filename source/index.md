@@ -8,17 +8,30 @@ projets
 articles
 resources
 contact
+_tags/tagsindex
 ```
 
 # Qui suis je
 
-{fas}`code` J'opère actuellement en qualité de __**Leader Technique**__ pour des équipes de développements.
+## 🥇 __Leader Technique__
 
-{fab}`python` Passioné de développement, je me suis petit à petit spécialisé en __**Python**__ pour offrir la meilleur expertise à mes clients.
+J'encadre des équipes de développements afin d'aider a la mise en place des meilleurs choix technique.
 
-{fas}`infinity` Agiliste convaincu, j'ai une appétence pour le __**DevOps**__ et l'amélioration continue, je ne conçois pas un projet
-sans critère de qualité.
+## 🐍 __Pythoniste__
 
-{fas}`circle-nodes` __**Data-scientiste**__ de formation, je suis capable d'évoluer sur des projets de différentes natures.
+Part mes 10 d'expériences en développement python,
+j'ai acquis une expertise pour la mise en place de tout type de projet
 
-{fas}`cloud` De part mes différentes expériences, j'ai également acquis des compétences Dev/Ops liées à des __**Cloud Providers**__.
+## ♾️ __Agiliste & DevOps__
+
+Convaincu que la remise en question et l'amélioration continue sont les clés pour la réussite d'un projet,
+je m'éfforce au maximum d'appliqué ces préceptes.
+
+## 🖥️ __Développeur & Data-engineer__
+
+Issue d'une formation orientée data, et passioné de développement, je sais tiré le meilleur des deux parties
+pour la réalisation de projet de différente nature
+
+##  🚀 Pédagogue
+
+De part ma formation et mon parcours, je suis capable d'animer des présentations sur des sujets technique.

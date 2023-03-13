@@ -7,3 +7,4 @@ pulumi-aws
 sphinx-copybutton
 sphinx-inline-tabs
 sphinx-favicon
+sphinx-tags
