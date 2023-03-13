@@ -51,6 +51,8 @@ html_theme_options = {
         "color-brand-content": DARK_COLOR,
     },
     "light_css_variables": {
+        "color-background-primary": "#eeebee",
+        "color-background-secondary": "#D0D0D0",
         "color-brand-primary": LIGHT_COLOR,
         "color-brand-content": LIGHT_COLOR,
     },

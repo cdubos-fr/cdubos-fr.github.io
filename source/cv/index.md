@@ -1,8 +1,8 @@
 # CV
 
 ```{toctree}
+:maxdepth: 1
 
-competences
 formations
 experiences
 ```
