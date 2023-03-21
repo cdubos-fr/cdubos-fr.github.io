@@ -8,7 +8,6 @@ projets
 articles
 resources
 contact
-_tags/tagsindex
 ```
 
 # Qui suis je

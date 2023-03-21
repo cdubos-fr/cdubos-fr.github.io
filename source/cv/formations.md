@@ -1,15 +1,12 @@
 # 🎓 Formations
 
-```{tags} Python, C, Java, C#
-```
 
-:::{dropdown} MASTER IGIS parcours STIM
-| Mention | 🏫  Localisation | 🗓️ Années |
-|---------|----------------------------------|-------------|
-| Bien    |  Université de Rouen - 76000 Rouen| 2014 - 2016 |
+:::{dropdown} MASTER IGIS parcours STIM - 🗓️ 2016
 
-```{tags} Python, Java
-```
+- 🗓️ Septembre 2014 -> Septembre 2016
+- 🏫: Université de Rouen
+- 🛠️: {bdg-primary}`Python`{bdg-secondary}`Java`
+- 🎓: Bien
 
 ```{div} sd-text-primary
 - IGIS: Informatique, Génie de l'Information et des Systèmes
@@ -28,7 +25,7 @@ Cette formation prépare à des fonctions de cadre dans toute entreprise du doma
 
 Projet d'étude et damélioration de méthode d'optimisation cost-sensitive pour classifier SVM.
 Dans ce contexte, j'étais le réalisateur principale, appuyé de 3 professeurs.
-Ce projet à également mené a un stage à Montréal, ainsi qu'une <a href="/_static/icpr_2016.pdf">publication dans l'ICPR 2016</a>.
+Ce projet à également mené a un stage à Montréal, ainsi qu'une <a href="/_static/icpr_2016.pdf" target="_blank">publication dans l'ICPR 2016</a>.
 
 - Python
 - Séparateur à vaste marge
@@ -58,40 +55,40 @@ dans des enregistrements sonores par apprentissage automatique.
 ```
 
 ```{dropdown} Programme
-- Traitement de l'Information:
-    * Traitement d'image
-    * Débruitage
-    * Morphologie mathématique
-    * Reconnaissance de formes (apprentissage automatique)
-    * Décision statistique
-    * Evaluation de performance
-    * Signaux Aléatoire
-    * Optimisation mathématique
-- Génie informatique:
+Traitement de l'Information:
+  * Traitement d'image
+  * Débruitage
+  * Morphologie mathématique
+  * Reconnaissance de formes (apprentissage automatique)
+  * Décision statistique
+  * Evaluation de performance
+  * Signaux Aléatoire
+  * Optimisation mathématique
+
+Génie informatique:
   * Programmation orientée objet
   * Multi Threading
   * Modèle Relationnel
   * Modélisation
   * Calcule distribué
-- Réseau et Système
+Réseau et Système
   * Système d'exploitation
   * Processus
   * Signaux
   * Gestion de resource
+
 - Management & Communication
 - Anglais
 ```
 :::
 
+:::{dropdown} LICENCE EEA parcours GEII - 🗓️ 2014
 
-:::{dropdown} LICENCE EEA parcours GEII
+- 🗓️ Septembre 2011 -> Septembre 2014
+- 🏫: Université de Rouen
+- 🛠️: {bdg-primary}`Python`{bdg-secondary}`C`{bdg}`C#`{bdg-info}`Aduino`
+- 🎓: Bien
 
-| Mention | 🏫 Localisation |   🗓️ Années    |
-|---------|---------------------------------- |-------------|
-| Bien    |  Université de Rouen - 76000 Rouen| 2011 - 2014 |
-
-```{tags} Python, C, C#
-```
 
 ```{div} sd-text-primary
 - EEA: Electronique, Energie Electrique, automatique
@@ -148,21 +145,27 @@ des pannes.
 ```
 
 ```{dropdown} Programme
-- Traitement du signal
+Traitement du signal
   * Traitement d'image
   * Filtrage
-- Electronique & Semi-conducteur
-- Génie informatique:
+
+Electronique & Semi-conducteur
+
+Génie informatique:
   * Programmation Embarquée
   * Programmation Impérative
+
 - Electrotechnique
 - Automatique
 - Anglais
 ```
 :::
 
-:::{dropdown} BACCALAURÉAT S-Science de l'Ingénieur spécialité Mathématique
-| Mention | 🏫 Localisation | 🗓️ Année d'obtention |
-|---------|--------------------------------------------- |-----|
-| Assez bien    |  Lycée Les Fontenelles - 27400 Louviers| 2011 |
+
+:::{dropdown} BACCALAURÉAT S-Science de l'Ingénieur spécialité Mathématique - 🗓️ 2011
+
+- 🗓️ 2011
+- 🏫: Lycée Les Fontenelles - 27400 Louviers
+- 🎓: Assez bien
+
 :::

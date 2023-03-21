@@ -2,7 +2,7 @@
 
 **Articles**
 
-- <a href="/_static/icpr_2016.pdf">ICPR 2016</a>
+- <a href="/_static/icpr_2016.pdf" target="_blank">ICPR 2016</a>
 
 
 **Présentation**

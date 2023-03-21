@@ -19,7 +19,6 @@ extensions = [
     "sphinx_copybutton",
     "sphinx_inline_tabs",
     "sphinx_favicon",
-    "sphinx_tags",
 ]
 myst_enable_extensions = ["colon_fence", "deflist"]
 myst_heading_anchors = 3
@@ -67,30 +66,20 @@ FAVICON_DIR = "favicon"
 favicons = [{"href": f"{FAVICON_DIR}/{file}"} for file in os.listdir(f"_static/{FAVICON_DIR}")]
 
 
-# -- Tags  -------------------------------------------------------------------
-tags_create_tags = True
-tags_create_badges = True
-tags_extension = ["md", "rst"]
-tags_badge_colors = {
-    "Python": "primary",
-    "GithubAction": "secondary",
-    "GitlabCI": "secondary",
-    "Pydantic": "info",
-    "Pulumi": "warning",
-    "Azure": "danger",
-    "AWS": "danger",
-    "*": "dark",
-}
-# Python, C#, Java, Jenkins, Scala, Spark, ElasticStack, GitlabCI,
-# GithubAction, Pulumi, Django, FastAPI, PostGres, Dask, Terraform, Azure,
-# AWS, Pydantic
+# {bdg}`plain badge`
 
-# Badges values
-# 'primary'
-# 'secondary'
-# 'success'
-# 'info'
-# 'warning'
-# 'danger'
-# 'light'
-# 'dark'
+# {bdg-primary}`primary`, {bdg-primary-line}`primary-line`
+
+# {bdg-secondary}`secondary`, {bdg-secondary-line}`secondary-line`
+
+# {bdg-success}`success`, {bdg-success-line}`success-line`
+
+# {bdg-info}`info`, {bdg-info-line}`info-line`
+
+# {bdg-warning}`warning`, {bdg-warning-line}`warning-line`
+
+# {bdg-danger}`danger`, {bdg-danger-line}`danger-line`
+
+# {bdg-light}`light`, {bdg-light-line}`light-line`
+
+# {bdg-dark}`dark`, {bdg-dark-line}`dark-line`
