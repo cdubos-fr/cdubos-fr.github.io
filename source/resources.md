@@ -28,7 +28,7 @@
 - [bandit](https://bandit.readthedocs.io/en/latest/): Analyse static de code
 - [autopep8](https://pypi.org/project/autopep8/): Formatter
 - [Mypy](https://mypy.readthedocs.io/en/stable/): Validation des annotations de type
--
+
 ### Outils
 - [tox](https://tox.wiki/en/latest/): Automotisation
 - [Pre-Commit](https://pre-commit.com/)
