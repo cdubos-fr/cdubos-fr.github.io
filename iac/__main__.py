@@ -20,7 +20,7 @@ def public_read_policy_for_bucket(bucket_name: str) -> str:
                     "Resource": [
                         f"arn:aws:s3:::{bucket_name}/*",
                     ],
-                }
+                },
             ],
         },
     )
