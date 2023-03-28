@@ -26,10 +26,10 @@ def public_read_policy_for_bucket(bucket_name: str) -> str:
     )
 
 
-def main(content_directory: str) -> None:
+def deploy_static_pages(target_bucket_name: str, content_directory: str) -> None:
     # Create an AWS resource (S3 Bucket)
     bucket = s3.Bucket(
-        "cdubos-public-website",
+        target_bucket_name,
         website=s3.BucketWebsiteArgs(
             index_document="index.html",
         ),
@@ -55,9 +55,15 @@ def main(content_directory: str) -> None:
     pulumi.export("website_url", bucket.website_endpoint)
 
 
-parent_directory = os.path.join(os.path.dirname(__file__), "..")
-source_directory = os.path.join(parent_directory, "source")
-build_directory = os.path.join(parent_directory, "build", "html")
+def main():
+    config = pulumi.Config()
 
-build.main([source_directory, build_directory, "-b=html"])
-main(build_directory)
+    parent_directory = os.path.join(os.path.dirname(__file__), "..")
+    source_directory = os.path.join(parent_directory, "source")
+    build_directory = os.path.join(parent_directory, "build", "html")
+
+    build.main([source_directory, build_directory, "-b=html"])
+    deploy_static_pages(config.get("target-bucket-name"), build_directory)
+
+
+main()
