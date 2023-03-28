@@ -1,17 +1,53 @@
-# Resources Externes
+# Python
 
-## Transverse
-
-- [OWASP](https://owasp.org/)
-- [Pre-Commit](https://pre-commit.com/)
-- [Pulumi](https://www.pulumi.com/docs/)
-- [Github Actions](https://docs.github.com/fr/actions)
-
-## Python
+## Liens
 
 - [Le Blue book](https://lyz-code.github.io/blue-book/)
 - [aide-mémoire Python](https://www.pythoncheatsheet.org/)
 - [Python Array API standard](https://data-apis.org/array-api/2022.12/)
+
+## Installation de python
+
+### Windows
+
+- [Python.org](https://www.python.org/downloads/)
+
+### Unix
+- [deadsnakes](https://github.com/deadsnakes), un repo linux pour les versions de python
+  - mise en place du repo:
+    > ```bash
+    > $ sudo add-apt-repository ppa:deadsnakes/ppa
+    > ```
+  - configuration des alias:
+    > ```bash
+    > $ sudo apt install python3-pip python-is-python3
+    > ```
+  - Installation d'une version de python:
+    > ```bash
+    > $ sudo apt install python3.X python3.X-distutils python3.X-dev
+    > ```
+  - pour changer la version de python par défaut:
+    > ```bash
+    > $ sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.X 1
+    > $ sudo update-alternatives --config python
+    > ```
+- [pyenv](https://github.com/pyenv/pyenv), un outils de management des versions de pythons:
+  - [Pre-requis](https://github.com/pyenv/pyenv/wiki#suggested-build-environment)
+  - [Téléchargement](https://github.com/pyenv/pyenv#basic-github-checkout)
+  - [Configuration](https://github.com/pyenv/pyenv#set-up-your-shell-environment-for-pyenv)
+  - [Usage](https://github.com/pyenv/pyenv/wiki#suggested-build-environment)
+  - Installation d'une version de python:
+    -  `$ pyenv install 3.X`
+    - configuration global `$ pyenv global 3.X`
+    - configuration local `$ pyenv local 3.X`
+
+### Package et Venv manager
+
+- [Pip](https://pypi.org/project/pip/)
+- [Pipenv](https://pipenv.pypa.io/en/latest/)
+- [Poetry](https://python-poetry.org/)
+- [Virtualenv](https://virtualenv.pypa.io/en/latest/)
+- [Pip-tools](https://github.com/jazzband/pip-tools)
 
 ### Test
 
@@ -38,7 +74,6 @@
 - [Commitizen](https://commitizen-tools.github.io/commitizen/): gestion des commits et des tags selon le [Convential Commit](https://www.conventionalcommits.org/en/v1.0.0/)
 - [Cookiecutter](https://cookiecutter.readthedocs.io/en/stable/): Génération de projet
 - [jupyter](https://docs.jupyter.org/en/latest/): Environnement intéractif et reproductible
-
 
 ### Documentation
 
@@ -89,8 +124,3 @@
 ### Templating
 
 - [Jinja](https://jinja.palletsprojects.com/en/3.1.x/)
-
-## Rust
-
-- [aide-mémoire Rust](https://cheats.rs/)
-- [Démarré avec Rust](https://www.rust-lang.org/learn/get-started)

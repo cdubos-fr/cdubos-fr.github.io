@@ -6,7 +6,7 @@ self
 cv/index
 projets
 articles
-resources
+memo/index
 contact
 ```
 
