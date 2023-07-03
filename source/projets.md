@@ -4,7 +4,7 @@
   - Github action pour la génération de tag depuis `__version__`
 - [cdubos-fr/gallifrey-war](https://github.com/cdubos-fr/gallifrey-war)
   - Theme Oh-My-Zsh inspiré du theme `gallifrey`
-- [cdubos-fr/whats_new_python3.11](https://github.com/cdubos-fr/whats-new-python3.11)
+- [cdubos-fr/whats-new-python3.11](https://github.com/cdubos-fr/whats-new-python3.11)
   - Présentation des nouveautés python 3.11 réalisé dans le cadre des [comèt' By Extia](https://www.extia-group.com/comet)
 - [cdubos-fr/loto](https://github.com/cdubos-fr/loto)
   - Projet personnel autour du loto de la française des jeux

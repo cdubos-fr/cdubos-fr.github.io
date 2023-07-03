@@ -6,4 +6,4 @@
 
 {fab}`linkedin` Linkedin: [Clément Dubos](https://www.linkedin.com/in/%F0%9F%92%BBcl%C3%A9ment-dubos-707747a5)
 
-🧭 Région Toulouse ou Full Remote
+🧭 Région Toulouse/Carcassonne ou Full Remote
