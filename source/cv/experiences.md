@@ -7,7 +7,7 @@
 ```{dropdown} Loft Orbital - MMS - Developpeur Python
 
 - 🗓️ Décemebre 2023 -> ...
-- 🛠️: {bdg-primary}`Python`{bdg-success}`Django`{bdg-success}`Graphene`{bdg-info}`Docker
+- 🛠️: {bdg-primary}`Python`{bdg-success}`Django`{bdg-success}`Graphene`{bdg-info}`Docker`
     {bdg-success}`GCP`
 - 👥: 5 Membres, 1 Manager
 - 💻: Développeur Python

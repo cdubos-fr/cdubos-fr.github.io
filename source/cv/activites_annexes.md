@@ -1,13 +1,13 @@
 # 🎯 Activitées Annexes
 
-:::{dropdown} Lead Comet' Dev' By Extia
+:::{dropdown} Lead Comet’ Dev’ By Extia
 
 - 🗓️ Aout 2021 -> Aout 2023
 - 🛠️: {bdg-primary}`Python`{bdg-success}`DevOps`
-- [Comet' By Extia](https://www.extia-group.com/comet)
+- [Comet’ By Extia](https://www.extia-group.com/comet)
 
 ```{dropdown} Contexte
-Créer des espaces de partage et des interactions sur des thématiques techniques, transverses ou sectorielles,  tel est le crédo des Communautés Métiers - aka les Comet' by Extia. Pôle d'expertise de l'écosystème Extia, les Comet' sont ouvertes aux Extien(ne)s, aux client(e)s, aux alumnis et à tou(te)s les curieux(ses) souhaitant partager ou approfondir leurs connaissances. L’émulation créée par les Comet’ nous permet de maintenir un niveau d’expertise élevé chez nos consultants et de  répondre au mieux aux besoins de nos clients, en restant à la pointe des tendances et de l’état de l’art.
+Créer des espaces de partage et des interactions sur des thématiques techniques, transverses ou sectorielles,  tel est le crédo des Communautés Métiers - aka les Comet’ by Extia. Pôle d'expertise de l'écosystème Extia, les Comet’ sont ouvertes aux Extien(ne)s, aux client(e)s, aux alumnis et à tou(te)s les curieux(ses) souhaitant partager ou approfondir leurs connaissances. L’émulation créée par les Comet’ nous permet de maintenir un niveau d’expertise élevé chez nos consultants et de  répondre au mieux aux besoins de nos clients, en restant à la pointe des tendances et de l’état de l’art.
 ```
 
 ```{dropdown} Réalisation
