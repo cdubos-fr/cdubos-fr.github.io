@@ -24,10 +24,10 @@ jobs:
       - name: build pages
         run: sphinx-build source build -b html
       - name: Archive artifact
-        uses: actions/upload-pages-artifact@v1.0.7
+        uses: actions/upload-pages-artifact@v2
         with:
           name: github-pages
           path: build/
           retention-days: 1
       - name: Deploy pages
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
