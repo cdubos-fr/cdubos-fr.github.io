@@ -1,5 +1,60 @@
 # 💼 Expériences
 
+## Freelance - 🗓️ Juillet 2023 -> ...
+
+
+
+```{dropdown} Loft Orbital - MMS - Developpeur Python
+
+- 🗓️ Décemebre 2023 -> ...
+- 🛠️: {bdg-primary}`Python`{bdg-success}`Django`{bdg-success}`Graphene`{bdg-info}`Docker
+    {bdg-success}`GCP`
+- 👥: 5 Membres, 1 Manager
+- 💻: Développeur Python
+
+:::{dropdown} Contexte
+Loft Orbital est une entreprise qui propose une solution d'infrastucture spatial en tant que service.
+L'Equipe MMS travail sur le service d'elaboration du plan d'execution (orchestration) qui sera réaliser prochainement par un satellite
+ainsi que le systeme de requete.
+
+:::
+:::{dropdown} Réalisation
+
+Coming soon
+
+:::
+```
+
+```{dropdown} Equipe Infrastructure - Platform Engineer
+
+- 🗓️ Juillet 2023 -> Juillet 2023
+- 🛠️: {bdg-primary}`Python`{bdg-info}`GithubAction`{bdg-info}`Pulumi`
+    {bdg-success}`AWS`{bdg-light}`Pydantic`
+- 👥: 5 Membres, 1 Manager
+- 💻: Platform Engineer
+
+:::{dropdown} Contexte
+Afin d'accompagner les équipes de développements, l'équipe infrastructure
+met en place les éléments d'infrastructure et d'automatisation des déploiements
+nécessaire a l'éxecution des applicatifs.
+
+:::
+:::{dropdown} Réalisation
+
+Réalisation des briques devops pour le déroulement du projet
+- Règle de protection des branches
+- CI (Test unitaire + coverage, linter, sécurité ...)
+- CD: déploiement selon environement et branche
+- github action, reusable workflow, ...
+
+Mise en place de l'infrastructure as code (Pulumi)
+- mise en place d'un framework d'organisation pour l'IaC
+- Ecriture et test de stack pour différent projet
+:::
+```
+
+
+
 ## Extia - 🗓️ Fev. 2020 -> Juin 2023
 
 ```{dropdown} Equipe Infrastructure - Platform Engineer

@@ -41,13 +41,22 @@
     - configuration global `$ pyenv global 3.X`
     - configuration local `$ pyenv local 3.X`
 
-### Package et Venv manager
+### Dependencies et Venv manager
 
 - [Pip](https://pypi.org/project/pip/)
+- [Pipx](https://pipx.pypa.io/stable/)
 - [Pipenv](https://pipenv.pypa.io/en/latest/)
 - [Poetry](https://python-poetry.org/)
 - [Virtualenv](https://virtualenv.pypa.io/en/latest/)
 - [Pip-tools](https://github.com/jazzband/pip-tools)
+- [PDM](https://pdm-project.org/latest/)
+- [Hatchling](https://hatch.pypa.io/latest/)
+
+### Packaging
+
+- [Flit](https://flit.pypa.io/en/stable/)
+- [SetupTools](https://setuptools.pypa.io/en/latest/)
+  - [SetupTools-SCM](https://setuptools-scm.readthedocs.io/en/latest/)
 
 ### Test
 
@@ -66,10 +75,13 @@
 - [Ruff](https://beta.ruff.rs/docs/): Linter with autofix
 - [Black](https://pypi.org/project/black/): Formatter
 - [YAPF](https://github.com/google/yapf): Formatter
+- [reorder-python-import](https://github.com/asottile/reorder-python-imports)
+- [pyupgrade](https://github.com/asottile/pyupgrade)
 
 ### Outils
 
 - [tox](https://tox.wiki/en/latest/): Automotisation
+- [Nox](https://nox.thea.codes/en/stable/): Automatisation
 - [Pre-Commit](https://pre-commit.com/)
 - [Commitizen](https://commitizen-tools.github.io/commitizen/): gestion des commits et des tags selon le [Convential Commit](https://www.conventionalcommits.org/en/v1.0.0/)
 - [Cookiecutter](https://cookiecutter.readthedocs.io/en/stable/): Génération de projet
@@ -80,17 +92,27 @@
 - [Sphinx](https://www.sphinx-doc.org/en/master/): générateur de Documentation
 - [Furo](https://pradyunsg.me/furo/): Theme Sphinx
 - [Mkdocs](https://www.mkdocs.org/) & [Mkdocstring](https://mkdocstrings.github.io/): generateur de documentation
-- [Mkdocs-marial](https://squidfunk.github.io/mkdocs-material/getting-started/): theme Mkdocs
+- [Mkdocs-material](https://squidfunk.github.io/mkdocs-material/getting-started/): theme Mkdocs
 
 ### Développement Web
 
 - [FastApi](https://fastapi.tiangolo.com/): Framework WEB Asynchrone pour la réalisation d'API REST
+- [Flask](https://flask.palletsprojects.com/en/3.0.x/)
+- [Falcon](https://falcon.readthedocs.io/en/stable/)
+- [Sanic](https://sanic.dev/en/)
 - [Django](https://www.djangoproject.com/): Framework dévelopment WEB
+  - [Django-Ninja](https://django-ninja.dev/): Extension django pour le rendre plus moderne
 
-### Packaging
+#### Web Server
 
-- [Flit](https://flit.pypa.io/en/stable/)
-- [Hatchling](https://pypi.org/project/hatchling)
+- [Gunicorn](https://gunicorn.org/)
+- [Uvicorn](https://www.uvicorn.org/)
+- [HyperCorn](https://pgjones.gitlab.io/hypercorn/)
+
+#### GraphQL
+
+- [Graphene](https://graphene-python.org/)
+- [Strawberry](https://strawberry.rocks/)
 
 ### Command line interface
 
