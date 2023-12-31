@@ -16,3 +16,5 @@
   - Template de projet
 - [cdubos-fr/merciyanis-music-store](https://gitlab.com/cdubos-fr/merciyanis-music-store)
   - Projet de demonstration de compétence {bdg-primary}`Python`{bdg-info}`GithubCI`{bdg-info}`FastAPI`
+- [cdubos-fr/github-microrepos-cli](https://github.com/cdubos-fr/github-microrepos-cli)
+  - Simple Cli to improve productivity in micro-repos context
