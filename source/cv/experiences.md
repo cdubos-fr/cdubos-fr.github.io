@@ -2,11 +2,9 @@
 
 ## Freelance - 🗓️ Juillet 2023 -> ...
 
-
-
 ```{dropdown} Loft Orbital - MMS - Developpeur Python
 
-- 🗓️ Décemebre 2023 -> ...
+- 🗓️ Décembre 2023 -> ...
 - 🛠️: {bdg-primary}`Python`{bdg-success}`Django`{bdg-success}`Graphene`{bdg-info}`Docker`
     {bdg-success}`GCP`
 - 👥: 5 Membres, 1 Manager
@@ -20,7 +18,11 @@ ainsi que le systeme de requete.
 :::
 :::{dropdown} Réalisation
 
-Coming soon
+Développement de composant Ground Software:
+- API GraphQL
+- Architecture Applicative
+- Correction de bug
+- Amélioration des pratiques de développement
 
 :::
 ```

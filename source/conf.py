@@ -2,7 +2,7 @@ import os
 
 # -- Project information -----------------------------------------------------
 project = "cdubos-vitrine"
-copyright = "2023, Clément Dubos"
+copyright = "2024, Clément Dubos"
 author = "Clément Dubos"
 
 # -- Configuration -----------------------------------------------------------
