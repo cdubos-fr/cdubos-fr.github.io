@@ -34,6 +34,7 @@
                     pip
                     tox
                     sphinx
+                    myst-parser
                   ]
                 ))
                 just
