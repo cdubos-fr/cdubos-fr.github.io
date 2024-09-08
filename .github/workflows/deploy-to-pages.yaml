@@ -14,20 +14,20 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - uses: cachix/install-nix-action@v27
       - name: Checkout repository
-        uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+        uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
-          python-version: '3.9'
+          python-version: '3.12'
           cache: 'pip'
-      - run: pip install -r requirements.txt
       - name: build pages
-        run: sphinx-build source build -b html
+        run: nix develop --command just build
       - name: Archive artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           name: github-pages
           path: build/
           retention-days: 1
       - name: Deploy pages
-        uses: actions/deploy-pages@v3
+        uses: actions/deploy-pages@v4

@@ -1,3 +1,0 @@
-config:
-  aws:region: eu-west-3
-  iac:target-bucket-name: "cdubos-public-website"

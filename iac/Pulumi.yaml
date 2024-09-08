@@ -1,6 +1,0 @@
-name: iac
-description: IaC for projet deployment
-runtime:
-    name: python
-    options:
-        virtualenv: ../.venv

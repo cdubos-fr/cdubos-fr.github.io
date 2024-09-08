@@ -137,3 +137,6 @@ data/
 *.nav
 *.snm
 *.toc
+
+# direnv
+.direnv
