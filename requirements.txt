@@ -1,9 +1,0 @@
-furo
-myst-parser
-pulumi
-pulumi-aws
-sphinx
-sphinx-copybutton
-sphinx-design
-sphinx-favicon
-sphinx-inline-tabs
