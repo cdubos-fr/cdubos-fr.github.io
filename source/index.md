@@ -33,4 +33,4 @@ pour la réalisation de projet de différente nature
 
 ##  🚀 Pédagogue
 
-De part ma formation et mon parcours, je suis capable d'animer des présentations sur des sujets technique.
+De part ma formation et mon parcours, je suis capable d'animer des présentations sur des sujets techniques.

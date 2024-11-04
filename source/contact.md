@@ -1,6 +1,6 @@
 # A propos
 
-{far}`envelope` Adresse mail: `contact` `arobase` `cdubos` `point` `fr`
+{far}`envelope` Adresse mail: <a href="mailto:contact@cdubos.fr">`contact@cdubos.fr`</a>
 
 {fab}`github` Github: [cdubos-fr](https://github.com/cdubos-fr)
 

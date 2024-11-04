@@ -5,16 +5,15 @@
 - [Oh My Zsh](https://ohmyz.sh/)
 - [Starship](https://starship.rs/)
 
-
 ## IDE
 
 - [vscode](https://code.visualstudio.com/)
-
 
 ## Tool
 
 - [Vagrant](https://www.vagrantup.com/)
 - [Pre-Commit](https://pre-commit.com/)
+- [Nix](https://zero-to-nix.com/)
 
 ### Windows
 - [Windows Terminal](https://github.com/microsoft/terminal)  (Les commandes doivent être executé dans un powershell en tant qu'administrateur)
