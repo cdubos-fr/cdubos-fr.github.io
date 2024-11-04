@@ -84,8 +84,9 @@
 - [Nox](https://nox.thea.codes/en/stable/): Automatisation
 - [Pre-Commit](https://pre-commit.com/)
 - [Commitizen](https://commitizen-tools.github.io/commitizen/): gestion des commits et des tags selon le [Convential Commit](https://www.conventionalcommits.org/en/v1.0.0/)
-- [Cookiecutter](https://cookiecutter.readthedocs.io/en/stable/): Génération de projet
-- [jupyter](https://docs.jupyter.org/en/latest/): Environnement intéractif et reproductible
+- [Cookiecutter](https://cookiecutter.readthedocs.io/en/stable/): Génération de projet par template
+- [Cruft](https://cruft.github.io/cruft/): sur couche a CookieCutter pour géré les montés de version de template
+- [Jupyter](https://docs.jupyter.org/en/latest/): Environnement intéractif et reproductible
 
 ### Documentation
 
@@ -124,6 +125,7 @@
 
 - [SqlAlchemy](https://www.sqlalchemy.org/): ORM
 - [SqlModel](https://sqlmodel.tiangolo.com/): Wrapper autour de sqlalchemy et pydantic
+- [Alembic](https://alembic.sqlalchemy.org/en/latest/): Gestion de migration pour SQLAlchemy/SQLModel
 
 ### Data
 
@@ -142,6 +144,7 @@
 ### Validation de donnée
 
 - [Pydantic](https://docs.pydantic.dev/): Validation de donnée et Settings management
+- [Returns](https://github.com/dry-python/returns): Meilleur gestion des types et des retours de fonction
 
 ### Templating
 

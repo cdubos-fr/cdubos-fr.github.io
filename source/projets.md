@@ -12,7 +12,7 @@
   - CLI pour convertir des pdf en images et inversement
 - [cdubos-fr/beamer-template](https://github.com/cdubos-fr/beamer-template)
   - Template Beamer
-- [cdubos-fr/cookiecutter-python](https://github.com/cdubos-fr/beamer-template)
+- [cdubos-fr/cookiecutter-python](https://github.com/cdubos-fr/cookiecutter-python)
   - Template de projet
 - [cdubos-fr/merciyanis-music-store](https://gitlab.com/cdubos-fr/merciyanis-music-store)
   - Projet de demonstration de compétence {bdg-primary}`Python`{bdg-info}`GithubCI`{bdg-info}`FastAPI`
