@@ -1,5 +1,16 @@
 # 🎯 Activitées Annexes
 
+:::{dropdown} Fondateur de Rés'Aude
+
+- 🗓️ 2024 -
+- 🛠️: {bdg-primary}`Python`{bdg-success}`DevOps`
+- [Site Web du collectif](https://resaude.fr/)
+
+```{dropdown} Contexte
+Res’Aude est un collectif d’acteurs du secteur du numérique (développeur, devops, UX/UI designer, product designer etc.) ayant à coeur de booster l’attractivité de leur région dans ce secteur.
+```
+:::
+
 :::{dropdown} Lead Comet’ Dev’ By Extia
 
 - 🗓️ Aout 2021 -> Aout 2023
