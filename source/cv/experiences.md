@@ -4,7 +4,7 @@
 
 ```{dropdown} Loft Orbital - MMS - Developpeur Python
 
-- 🗓️ Décembre 2023 -> ...
+- 🗓️ Décembre 2023 -> Avril 2025
 - 🛠️: {bdg-primary}`Python`{bdg-success}`Django`{bdg-success}`Graphene`{bdg-info}`Docker`
     {bdg-success}`GCP`
 - 👥: 5 Membres, 1 Manager
@@ -23,6 +23,7 @@ Développement de composant Ground Software:
 - Architecture Applicative
 - Correction de bug
 - Amélioration des pratiques de développement
+- Réalisation d'un framework de développement pour l'écriture de workflow
 
 :::
 ```
