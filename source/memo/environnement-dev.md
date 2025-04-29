@@ -16,11 +16,11 @@
 - [Nix](https://zero-to-nix.com/)
 
 ### Windows
-- [Windows Terminal](https://github.com/microsoft/terminal)  (Les commandes doivent être executé dans un powershell en tant qu'administrateur)
+- [Windows Terminal](https://github.com/microsoft/terminal)  (Les commandes doivent être exécuté dans un powershell en tant qu'administrateur)
   - Aller sur le [tag](https://github.com/microsoft/terminal/tags) le plus récent
   - en bas de page, récupérer le fichier `.msixbundle` correspondant a votre système (Windows 10 ou Windows 11)
   - Executer la commande `$ Add-AppxPackage Path/Vers/LeFichier.msixbundle`
-- [WSL 2](https://learn.microsoft.com/fr-fr/windows/wsl/install-manual) (Les commandes doivent être executé dans un powershell en tant qu'administrateur)
+- [WSL 2](https://learn.microsoft.com/fr-fr/windows/wsl/install-manual) (Les commandes doivent être exécuté dans un powershell en tant qu'administrateur)
   - Réaliser les étapes 1 et 3
   - Rédémarrer
   - Réaliser l'étape 4 et 5
@@ -28,9 +28,8 @@
     - par exemple: `$ wsl --install -d Ubuntu`
 - [docker desktop](https://docs.docker.com/engine/install/)
 
-> Attention: Si vous obtenez une erreur dans votre WSL2 en faisant `sudo apt update`, il faut faire quelque
-> modification:
-> - ajouté le un fichier `/etc/wsl.conf` contenant les informations suivantes:
+> Attention: Si vous obtenez une erreur dans votre WSL2 en faisant `sudo apt update`, il faut faire quelques modifications:
+> - ajouté le fichier `/etc/wsl.conf` contenant les informations suivantes:
 >   ```bash
 >   [network]
 >   generateResolvConf = false
@@ -72,7 +71,7 @@ Générer des clés ssh avec:
 ```bash
 $ ssh-keygen
 ```
-puis ajouté votre clé public dans l'[espace github](https://github.com/settings/keys)
+puis ajouter votre clé public dans l'[espace github](https://github.com/settings/keys)
 
 ### Configurer un PAT (Personnal Access token)
 

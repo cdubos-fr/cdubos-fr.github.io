@@ -1,4 +1,4 @@
-# 🎯 Activitées Annexes
+# 🎯 Activités Annexes
 
 :::{dropdown} Fondateur de Rés'Aude
 
@@ -60,8 +60,7 @@ L'AREIGE est un association étudiante ayant pour objectif premier la participat
 - 🛠️: {bdg-primary}`Python`{bdg-secondary}`Rootme`{bdg-primary}`CTF`
 
 ```{dropdown} Contexte
-L'association Jeanne d'Hack était un hackerspace, espace dans lesquelle des
-passionné ce rejoignait chaque semaine afin de découvrir et partager des
+L'association Jeanne d'Hack était un hackerspace, espace dans lequel des passionnés se rejoignaient chaque semaine afin de découvrir et partager des
 connaissances.
 ```
 

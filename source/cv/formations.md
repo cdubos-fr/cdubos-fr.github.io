@@ -23,8 +23,8 @@ Cette formation prépare à des fonctions de cadre dans toute entreprise du doma
 ```{dropdown} Projet d'étude
 **Optimisation cost-sensitive pour SVM - 1 ans 6 mois **
 
-Projet d'étude et damélioration de méthode d'optimisation cost-sensitive pour classifier SVM.
-Dans ce contexte, j'étais le réalisateur principale, appuyé de 3 professeurs.
+Projet d'étude et d'amélioration de méthode d'optimisation cost-sensitive pour classifier SVM.
+Dans ce contexte, j'étais le réalisateur principal, appuyé de 3 professeurs.
 Ce projet à également mené a un stage à Montréal, ainsi qu'une <a href="/_static/icpr_2016.pdf" target="_blank">publication dans l'ICPR 2016</a>.
 
 - Python
@@ -111,12 +111,12 @@ Un projet en informatique industrielle et un stage en entreprise permet à l'ét
 
 
 ```{dropdown} Projets d'études
-Afin de sensibiliser à la réalisation de projet dans le domaine industriel, des projets d'études était à réaliser lors de mes études à l'université de Rouen.
+Afin de sensibiliser à la réalisation de projet dans le domaine industriel, des projets d'études étaient à réaliser lors de mes études à l'université de Rouen.
 
 
 **Jeu vidéo par contrôle cérébral  - 8 mois**
 
-En troisième année de licence, le projet choisit à été de piloter un jeu video type space invader par ondes cérébrales, dans une équipe de 2 personnes.
+En troisième année de licence, le projet choisi a été de piloter un jeu video type space invader par ondes cérébrales, dans une équipe de 2 personnes.
 
 * Etude des différentes ondes cérébral
     - Steady-State Visual Evoked Potentials ( SSVEP)
@@ -132,7 +132,7 @@ En troisième année de licence, le projet choisit à été de piloter un jeu vi
 
 En deuxième année de Licence, Le projet choisit concernait le pilotage d'un système d'éclairage à LED par commandes vocales et gestuelles à l'aide d'une kinect, en qualité de développeur, dans une équipe de 5 personnes.
 
-* Capture des commandes vocales et gestulles : C# / Kinect
+* Capture des commandes vocales et gestuelles : C# / Kinect
 * Transformation et transmission des informations : C / Arduino
 ```
 

@@ -98,11 +98,11 @@ Mise en place de l'infrastructure as code (Pulumi)
 
 :::{dropdown} Contexte
 
-L'entreprise Bimpli est un aggrégateur de service pour les salariés.
+L'entreprise Bimpli est un agrégateur de service pour les salariés.
 Dans un but de centralisation, qualification et uniformisation de la donnée,
 celle-ci a souhaité mettre en place un système de management de la donnée (MdM) dans un ecosystème AWS.
 
-Les équipes sont organisé selon un train SAFe.
+Les équipes sont organisées selon un train SAFe.
 :::
 :::{dropdown} Réalisation
 
@@ -139,7 +139,7 @@ Dans un soucie d'harmonisation de l'existant, l'ESA (European Spatial Agency) so
 
 L'outil doit fournir:
 - une interface standardisé pour accéder a différent type de donnée (zarr, netcdf, cog, ...), sur différent système de fichier (s3, local, ...) de manière lazy.
-- un système de calcule distribué par graphe.
+- un système de calcul distribué par graphe.
 - différentes méthodes de déclenchement des algorithmes (CLI, REST, ...)
 - un mecanisme de trace et de log.
 :::
@@ -237,7 +237,7 @@ Développement d'un portail web
 CI/CD
 - Azure devops
 - Analyse de vulnérabilité - python bandit
-- Compléxité/Maintenabilité - python xenon/Flake8
+- Complexité/Maintenabilité - python xenon/Flake8
 - Test Unitaire / code coverage
 - Formatage du code - python Black
 - validation avant commit : pre-commit
@@ -297,12 +297,12 @@ Gestion et maintien de la CI/CD
 
 :::{dropdown} Contexte
 
-Afin de facilité la validation de norme STANAG par des experts métiers, la création d'un outils à partir d'une architecture modulaire, et facilement réutilisable en utilisant des concepts de méthodes de deeplearning et d'étiquettage automatique fut proposé.
+Afin de faciliter la validation de norme STANAG par des experts métiers, la création d'un outils à partir d'une architecture modulaire, et facilement réutilisable en utilisant des concepts de méthodes de deeplearning et d'étiquettage automatique fut proposé.
 :::
 
 :::{dropdown} Réalisation
 
-Ce Projet ma permis d'être au coeur d'un projet majeur et d'être force de proposition sur mes domaines d'expertises.
+Ce Projet m'a permis d'être au coeur d'un projet majeur et d'être force de proposition sur mes domaines d'expertises.
 - Modélisation et création de l'architecture logiciel et d'analyse de données.
 - Prototype d'un système simple - Keras / Scikit-learn
 - Etat de l'art sur le décodage de donnée binaire par machine learning.
@@ -321,7 +321,7 @@ Gestion et maintien de la CI/CD
 - Mise en place d'un pipeline Gitlab CI
 - Test Unitaire
 - Analyse de code/vulnérabilité - SonarQube
-- Remonté d'indicateur minimaux : maintenabilité/complexité du code
+- remontée d'indicateurs minimaux : maintenabilité/complexité du code
 :::
 ```
 
@@ -335,7 +335,7 @@ Gestion et maintien de la CI/CD
 
 :::{dropdown} Contexte
 
-Dans le contexte d'un projet national majeur de la protection des données et des systèmes informatiques, la nécessité de développer un outils dans l'air du big data à amener à la création de ce projet compétitif.
+Dans le contexte d'un projet national majeur de la protection des données et des systèmes informatiques, la nécessité de développer un outils dans l'ère du big data à amener à la création de ce projet compétitif.
 
 :::
 
@@ -400,7 +400,7 @@ Maintien de la CI
 
 
 :::{dropdown} Contexte
-Développement de progiciel à destination des comptables et des aggriculteurs.
+Développement de progiciel à destination des comptables et des agriculteurs.
 :::
 :::{dropdown} Réalisation
 Développement de feuille de saisie à l'aide de C# et WPF

@@ -1,17 +1,17 @@
 # Projets
 
 - [cdubos-fr/pdf-img-converter-gui](https://github.com/cdubos-fr/pdf-img-converter-gui)
-  - Un interface utilisateur d'intégration pour le `pdf-img-converter`
+  - Une interface utilisateur d'intégration pour le `pdf-img-converter`
 - [cdubos-fr/pdf-img-converter](https://github.com/cdubos-fr/pdf-img-converter)
   - CLI pour convertir des pdf en images et inversement
 - [cdubos-fr/merciyanis-music-store](https://gitlab.com/cdubos-fr/merciyanis-music-store)
-  - Projet de demonstration de compétence {bdg-primary}`Python`{bdg-info}`GithubCI`{bdg-info}`FastAPI`
+  - Projet de démonstration de compétence {bdg-primary}`Python`{bdg-info}`GithubCI`{bdg-info}`FastAPI`
 - [cdubos-fr/cookiecutter-python](https://github.com/cdubos-fr/cookiecutter-python)
   - Template de projet Python
 - [cdubos-fr/loto](https://github.com/cdubos-fr/loto)
   - Projet personnel autour du loto de la française des jeux
 - [cdubos-fr/whats-new-python3.11](https://github.com/cdubos-fr/whats-new-python3.11)
-  - Présentation des nouveautés python 3.11 réalisé dans le cadre des [comèt' By Extia](https://www.extia-group.com/comet)
+  - Présentation des nouveautés python 3.11 réalisée dans le cadre des [comèt' By Extia](https://www.extia-group.com/comet)
 - [cdubos-fr/beamer-template](https://github.com/cdubos-fr/beamer-template)
   - Template Beamer
 - [cdubos-fr/gallifrey-war](https://github.com/cdubos-fr/gallifrey-war)

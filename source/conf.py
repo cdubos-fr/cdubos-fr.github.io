@@ -23,6 +23,8 @@ extensions = [
     "sphinx_copybutton",
     "sphinx_inline_tabs",
     "sphinx_favicon",
+    "sphinx_sitemap",
+    "sphinxext.opengraph",
 ]
 myst_enable_extensions = ["colon_fence", "deflist"]
 myst_heading_anchors = 3
@@ -44,9 +46,20 @@ LIGHT_COLOR = "#0E7322"
 html_theme = "furo"
 html_static_path = ["_static"]
 html_show_sphinx = True
+html_show_sourcelink = False
 
 html_logo = "_static/icon.svg"
-html_title = "Clément Dubos"
+html_title = "Clément Dubos | Développeur logiciel"
+html_short_title = "Clément Dubos"
+html_description = (
+    "Développeur logiciel, expert Python, "
+    "j'accompagne les entreprises dans leur besoin du quotidien."
+)
+sitemap_url_scheme = "{link}"
+ogp_site_url = html_baseurl = "https://cdubos.fr/"
+ogp_description_length = 300
+ogp_site_name = "Clément Dubos - Développeur logiciel"
+ogp_image = "_static/icon.svg"
 
 html_theme_options = {
     "dark_css_variables": {
@@ -63,6 +76,7 @@ html_theme_options = {
 
 html_css_files = [
     "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css",
+    "css/custom.css",
 ]
 
 FAVICON_DIR = "favicon"
