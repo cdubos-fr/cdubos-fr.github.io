@@ -24,7 +24,7 @@ jobs:
           BUILD_DIR: source
           BUILD_ONLY: true
           CHECK_LINKS: true
-          CHECK_FLAGS: --skip-raw  # exemple d'option; adapter si besoin
+          CHECK_FLAGS: --skip-external-links  # ignore les liens externes pour accélérer la vérification
 
       # Build + déploiement sur main
       - name: Build and deploy (main)
@@ -35,7 +35,7 @@ jobs:
           BUILD_DIR: source
           PAGES_BRANCH: gh-pages
           CHECK_LINKS: true
-          CHECK_FLAGS: --skip-raw
+          CHECK_FLAGS: --skip-external-links
 
       - name: Upload artifact (PR only)
         if: github.event_name == 'pull_request'
