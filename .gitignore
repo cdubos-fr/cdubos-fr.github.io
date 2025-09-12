@@ -68,8 +68,10 @@ instance/
 # Scrapy stuff:
 .scrapy
 
-# Sphinx documentation
-docs/_build/
+# Documentation legacy (Sphinx) & génération statique
+build/
+public/
+.zola-cache/
 
 # PyBuilder
 target/

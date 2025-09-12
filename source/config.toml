@@ -1,0 +1,15 @@
+base_url = "https://cdubos.fr/"
+compile_sass = false
+default_language = "fr"
+minify_html = true
+generate_feeds = false
+build_search_index = false
+
+[markdown]
+highlight_code = true
+
+[extra]
+brand_name = "Clément Dubos"
+brand_tagline = "Solutions numériques pour les professionnels de l’Aude"
+contact_email = "contact@cdubos.fr"
+region = "Aude / Carcassonne & Remote"

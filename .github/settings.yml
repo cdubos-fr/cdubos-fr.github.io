@@ -1,8 +1,8 @@
 repository:
   name: cdubos-fr.github.io
-  description: Site vitrine personnel cdubos.fr (Sphinx + GitHub Actions, sans Nix)
+  description: Site vitrine personnel cdubos.fr – Zola (static site) déployé via GitHub Pages
   homepage: https://github.com/cdubos-fr/cdubos-fr.github.io
-  topics: sphinx, documentation, portfolio, github-pages
+  topics: zola, static-site, portfolio, github-pages, minimal, css
   private: false
   has_issues: true
   has_projects: false
@@ -32,8 +32,7 @@ branches:
       required_status_checks:
         strict: true
         contexts: [
-          "CI / lint-and-typecheck",
-          "CI / build-docs",
+          "zola / build_or_deploy",
         ]
       enforce_admins: true
       required_linear_history: true

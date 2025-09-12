@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="section container">
+  <header>
+    <h1>{{ section.title }}</h1>
+    {% if section.description %}<p class="page-desc">{{ section.description }}</p>{% endif %}
+  </header>
+  <div class="section-body">
+    {{ section.content | safe }}
+    {% if section.pages or section.subsections %}
+    <div class="child-pages">
+      <ul>
+        {% for p in section.pages %}
+          <li><a href="{{ p.permalink }}">{{ p.title }}</a>{% if p.description %} – <span class="muted">{{ p.description }}</span>{% endif %}</li>
+        {% endfor %}
+        {% for s in section.subsections %}
+          {% set sub = get_section(path=s) %}
+          <li><a href="{{ sub.permalink }}">{{ sub.title }}</a>{% if sub.description %} – <span class="muted">{{ sub.description }}</span>{% endif %}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% endblock content %}
