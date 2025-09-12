@@ -1,3 +1,7 @@
++++
+title = "Python"
++++
+
 # Python
 
 ## Liens
@@ -14,32 +18,32 @@
 
 ### Unix
 - [deadsnakes](https://github.com/deadsnakes), un repo linux pour les versions de python
-  - mise en place du repo:
-    > ```bash
-    > $ sudo add-apt-repository ppa:deadsnakes/ppa
-    > ```
-  - configuration des alias:
-    > ```bash
-    > $ sudo apt install python3-pip python-is-python3
-    > ```
-  - Installation d'une version de python:
-    > ```bash
-    > $ sudo apt install python3.X python3.X-distutils python3.X-dev
-    > ```
-  - pour changer la version de python par défaut:
-    > ```bash
-    > $ sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.X 1
-    > $ sudo update-alternatives --config python
-    > ```
+	- mise en place du repo:
+		```bash
+		sudo add-apt-repository ppa:deadsnakes/ppa
+		```
+	- configuration des alias:
+		```bash
+		sudo apt install python3-pip python-is-python3
+		```
+	- Installation d'une version de python:
+		```bash
+		sudo apt install python3.X python3.X-distutils python3.X-dev
+		```
+	- pour changer la version de python par défaut:
+		```bash
+		sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.X 1
+		sudo update-alternatives --config python
+		```
 - [pyenv](https://github.com/pyenv/pyenv), un outils de management des versions de pythons:
-  - [Pre-requis](https://github.com/pyenv/pyenv/wiki#suggested-build-environment)
-  - [Téléchargement](https://github.com/pyenv/pyenv#basic-github-checkout)
-  - [Configuration](https://github.com/pyenv/pyenv#set-up-your-shell-environment-for-pyenv)
-  - [Usage](https://github.com/pyenv/pyenv/wiki#suggested-build-environment)
-  - Installation d'une version de python:
-    -  `$ pyenv install 3.X`
-    - configuration global `$ pyenv global 3.X`
-    - configuration local `$ pyenv local 3.X`
+	- [Pre-requis](https://github.com/pyenv/pyenv/wiki#suggested-build-environment)
+	- [Téléchargement](https://github.com/pyenv/pyenv#basic-github-checkout)
+	- [Configuration](https://github.com/pyenv/pyenv#set-up-your-shell-environment-for-pyenv)
+	- [Usage](https://github.com/pyenv/pyenv/wiki#suggested-build-environment)
+	- Installation d'une version de python:
+		-  `pyenv install 3.X`
+		- configuration global `pyenv global 3.X`
+		- configuration local `pyenv local 3.X`
 
 ### Dependencies et Venv manager
 
@@ -56,7 +60,7 @@
 
 - [Flit](https://flit.pypa.io/en/stable/)
 - [SetupTools](https://setuptools.pypa.io/en/latest/)
-  - [SetupTools-SCM](https://setuptools-scm.readthedocs.io/en/latest/)
+	- [SetupTools-SCM](https://setuptools-scm.readthedocs.io/en/latest/)
 
 ### Test
 
@@ -102,7 +106,7 @@
 - [Falcon](https://falcon.readthedocs.io/en/stable/)
 - [Sanic](https://sanic.dev/en/)
 - [Django](https://www.djangoproject.com/): Framework dévelopment WEB
-  - [Django-Ninja](https://django-ninja.dev/): Extension django pour le rendre plus moderne
+	- [Django-Ninja](https://django-ninja.dev/): Extension django pour le rendre plus moderne
 
 #### Web Server
 

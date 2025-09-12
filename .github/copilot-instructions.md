@@ -4,31 +4,29 @@ Ce fichier fournit des directives pour générer du code ou du contenu cohérent
 
 ## Contexte du projet
 - Projet: Site vitrine personnel `cdubos.fr`
-- Générateur: Sphinx (build HTML statique)
-- Sources: Dossiers Markdown/ReST dans `source/`
-- Thème principal: `furo`
-- Extensions Sphinx activées: myst-parser, sphinx-design, sphinx-copybutton, sphinx-inline-tabs, sphinx-sitemap, sphinxext-opengraph, sphinx-favicon (vérifier disponibilité), + extensions core (autodoc, todo, mathjax, viewcode, intersphinx, extlinks)
+- Générateur: Zola (static site) – migration achevée depuis Sphinx
+- Racine Zola: `source/` (contient `config.toml`, `content/`, `templates/`, `static/`)
+- Templates: Tera (`base.html`, pages, sections) + composants CSS custom (hero, timeline, slices, cartes solutions, FAQ)
+- Déploiement: GitHub Pages via `shalzz/zola-deploy-action`
 
 ## Structure essentielle
 ```
 source/
-  index.md
-  articles.md
-  contact.md
-  projets.md
-  cv/ ...
-  memo/ ...
-  _static/ (assets, favicon, css)
-  _templates/ (layout custom)
-pyproject.toml (dépendances et outils de dev)
-.github/workflows/ci.yaml (CI)
-Justfile (commandes build / serveur)
+  config.toml            # Configuration Zola
+  content/               # Pages & sections (Markdown)
+  templates/             # Templates Tera
+  static/                # Assets copiés (favicon, pdf, og-image, CNAME...)
+  static/style.css       # Styles custom (design système léger)
+Justfile                 # Raccourcis build/serve
+.github/workflows/ci.yaml
+.pre-commit-config.yaml
+README.md
 ```
 
 ## Commandes clés
-- Construire: `sphinx-build source build -b html` (alias `just build`)
-- Servir (local): `python -m http.server -d build`
-- Préparer env: `pip install -e .[dev] && pre-commit install`
+- Build: `zola build` (alias `just build`)
+- Serveur local auto-reload: `zola serve` (alias `just serve`)
+- Hooks pre-commit (optionnel): `pre-commit install`
 
 ## Conventions
 ### Commits (Conventional Commits)
@@ -41,77 +39,65 @@ Exemples:
 - `docs(readme): préciser installation avec uv`
 - `ci(build-docs): ajouter artefact zipped`
 
-### Style Python
-- Black (line-length 100)
-- Flake8 (max-line-length 100, ignore E203)
-- Mypy en mode modéré (pas strict = strict=false mais warnings activés)
-- Imports: laisser pre-commit réordonner (reorder-python-imports)
+### Code / Style
+Le dépôt est essentiellement du contenu Markdown + Tera + CSS.
+- Éviter le JavaScript si une variante pure CSS suffit.
+- Limiter les dépendances externes (autonomie du bundle).
+- Préserver la cohérence des classes utilitaires existantes.
 
-### Sphinx / Contenu
-- Préférer Markdown via myst-parser
-- Utiliser `:::`, `:::` fences colon_fence pour blocs
-- Ajouter ancres titres: myst_heading_anchors=3
-- Badges design: `{bdg-primary}` etc. (voir exemples dans `conf.py`)
+### Contenu Markdown
+- Toujours commencer par un H1 unique
+- Ton concis, orienté valeur / concret
+- Préférer listes courtes, blocs de code minimalistes
+- Pas de wrapping manuel des lignes
+- Pour les liens internes: utiliser chemins relatifs cohérents
 
 ## Ajout de contenu
-Lorsque Copilot propose une nouvelle page:
-1. Créer le fichier `.md` dans le dossier approprié (ex: `source/memo/` pour notes techniques)
-2. Ajouter un titre H1 unique (`# Titre`)
-3. Éviter les phrases vides d’information; privilégier exemples concrets (code Python minimal ou commandes shell)
-4. Pas de wrapping manuel des lignes (la longueur 100 est gérée côté outils)
+1. Créer le fichier sous `source/content/` (ex: `content/memo/nom.md`)
+2. Mettre un `title` dans le front matter si nécessaire (sinon H1 utilisé)
+3. Ajouter un H1 (`# Titre de la page`)
+4. Sections: utiliser H2/H3 progressifs
+5. Fournir exemples concrets (commandes shell, fragments config) plutôt que discours abstrait
+6. Option discrète (noindex) pour pages internes: front matter `extra.noindex = true` + lien uniquement depuis pied de page si besoin
 
-## CI
-Deux jobs:
-- `lint-and-typecheck`: exécute pre-commit sur l’ensemble du repo
-- `build-docs`: construit la doc et publie un artefact
-
-Toute modification de build doit maintenir la compatibilité Python 3.12+ (voir `requires-python`).
+## CI / Déploiement
+- Action unique: build + (sur `main`) déploiement vers `gh-pages` avec `shalzz/zola-deploy-action`
+- Pull Requests: build only + link check (`CHECK_LINKS=true`)
+- Variables d'env principales : `BUILD_DIR=source`, `PAGES_BRANCH=gh-pages`
+- Possibilité future: ajouter un job distinct `zola check --drafts` ou Lighthouse (manuel)
 
 ## Dépendances
-Runtime doc:
-```
-sphinx
-furo
-myst-parser
-sphinx-copybutton
-sphinx-design
-sphinx-inline-tabs
-sphinx-sitemap
-sphinxext-opengraph
-sphinx-favicon (si disponible)
-```
-Dev:
+Runtime: Aucune (binaire Zola uniquement).
+Dev tools:
 ```
 pre-commit
-black
-flake8
-mypy
-tox
-bandit
 commitizen
 ```
+Tout ajout doit être justifié (éviter empilement d'outils).
 
 ## Bonnes pratiques de suggestions
-- Ne pas introduire de frameworks web (Django, FastAPI, etc.) sans justification -> le site est statique
-- Ne pas proposer d’ajout de JavaScript lourd; privilégier le CSS existant
-- Vérifier que toute extension Sphinx proposée est compatible avec Sphinx >=7.3
-- Pour un snippet Python inséré dans la doc, utiliser des blocs markdown triple backticks avec `python`
-- Ne pas toucher aux fichiers générés dans `build/`
+- Ne pas introduire de frameworks web ou bundlers lourds
+- Privilégier variantes CSS (utiliser :focus-visible, @media, prefers-color-scheme)
+- Garder les classes semantiques (`slice`, `solution-card`, `timeline`, etc.)
+- Pas de libs JS tiers pour accordéons (utiliser `<details>`)
+- Ne pas toucher aux fichiers générés (`public/`)
 
 ## Tâches fréquentes automatisables
-- Ajout d’une nouvelle page: créer fichier + lister dans `index.md` si navigation manuelle
-- Mise à jour dépendance: ajuster version dans `pyproject.toml` puis relancer `pip install -e .[dev]`
-- Ajout CI: cloner structure de job dans `.github/workflows/ci.yaml`
+- Nouvelle page: créer fichier + vérifier navigation (si besoin d'un lien explicite)
+- Ajouter un asset: placer dans `static/` (sera copié tel quel)
+- Page confidentielle: `extra.noindex = true` et lien discret
+- Ajustement SEO: modifier `<head>` dans `templates/base.html`
 
 ## Limitations connues
-- Pas de test unitaire pour l’instant (site statique). Tests légers possibles: grep dans HTML produit.
-- `sphinx-favicon` était auparavant géré via Nix; fallback possible: suppression si non installable.
+- Pas de tests automatiques de rendu HTML (possible d'ajouter `zola check` + grep liens cassés)
+- Pas (encore) de génération automatisée d'images Open Graph
+- Link checker simple dépend de Zola (peut manquer certains cas dynamiques)
 
 ## Idées futures (guidage pour suggestions Copilot)
-- Ajouter un job de déploiement GitHub Pages
-- Ajouter un script de validation HTML (link checker) via `sphinx-build -b linkcheck`
-- Intégrer Ruff pour unifier flake8 + import ordre
-- Ajouter un petit script de purge d’artefacts
+- Job dédié `zola check` séparé pour liens
+- Génération d'OG images dyn (ex: script headless)
+- Ajout d'un mini audit accessibilité (liste focus, contrastes)
+- Mode imprimable CSS minimal
 
 ---
 Copilot: suivez ces directives pour rester cohérent avec l’intention du projet.

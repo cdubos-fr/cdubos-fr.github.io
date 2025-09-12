@@ -3,9 +3,14 @@ set shell := ["zsh", "-uc"]
 devenv:
     pre-commit install
 
+[working-directory: 'source']
 build:
-    rm -rf build
-    sphinx-build source build -b html
+    zola build
 
-run-server:
-    python -m http.server -d build
+[working-directory: 'source']
+serve:
+    zola serve --port 1111
+
+[working-directory: 'source']
+clean:
+    rm -rf public

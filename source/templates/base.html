@@ -1,0 +1,90 @@
+{# Détermination robuste du contexte courant pour éviter l'évaluation à true/false #}
+{% if page %}
+  {% set current = page %}
+  {% set title = page.title %}
+  {% set meta_description = page.description | default(value=config.extra.brand_tagline) %}
+{% elif section %}
+  {% set current = section %}
+  {% set title = section.title %}
+  {% set meta_description = section.description | default(value=config.extra.brand_tagline) %}
+{% else %}
+  {% set current = None %}
+  {% set title = config.extra.brand_name %}
+  {% set meta_description = config.extra.brand_tagline %}
+{% endif %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{ title }} - {{ config.extra.brand_tagline }}</title>
+  <meta name="description" content="{{ meta_description }}" />
+  <link rel="canonical" href="{{ (page and page.permalink) or (section and section.permalink) }}" />
+  {% if current and current.extra and current.extra.noindex %}
+  <meta name="robots" content="noindex,nofollow" />
+  {% else %}
+  <meta name="robots" content="index,follow" />
+  {% endif %}
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ title }}" />
+  <meta property="og:description" content="{{ meta_description }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{ (page and page.permalink) or (section and section.permalink) }}" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:image" content="https://cdubos.fr/og-image.png" />
+  <meta name="twitter:image" content="https://cdubos.fr/og-image.png" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="{{ title }}" />
+  <meta name="twitter:description" content="{{ meta_description }}" />
+  <link rel="icon" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container flex between center-v">
+    <a class="logo" href="/">
+      <img src="/logo.svg" alt="{{ config.extra.brand_name }}" width="34" height="34" class="logo-mark" />
+      <span class="logo-text">{{ config.extra.brand_name }}</span>
+    </a>
+  <nav class="main-nav" aria-label="Navigation principale">
+      <a href="/solutions/">Solutions</a>
+      <a href="/parcours/">Parcours</a>
+      <a href="/references/">Références</a>
+      <a href="/about/">À propos</a>
+      <a href="/contact/" class="btn btn-sm btn-outline">Contact</a>
+    </nav>
+  </div>
+</header>
+<main class="site-main">
+  {% block content %}{% endblock content %}
+</main>
+<footer class="site-footer">
+  <div class="container grid-footer">
+    <div>
+      <strong>{{ config.extra.brand_name }}</strong><br/>
+      {{ config.extra.region }}<br/>
+      <a href="mailto:{{ config.extra.contact_email }}">{{ config.extra.contact_email }}</a>
+    </div>
+    <div>
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="/solutions/">Solutions</a></li>
+        <li><a href="/parcours/">Parcours</a></li>
+        <li><a href="/references/">Références</a></li>
+        <li><a href="/about/">À propos</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Mentions</h4>
+  <p>© {{ now() | date(format="%Y") }} {{ config.extra.brand_name }}. Tous droits réservés.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
