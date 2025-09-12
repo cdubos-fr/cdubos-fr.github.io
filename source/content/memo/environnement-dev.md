@@ -2,8 +2,6 @@
 title = "Environnement de développement"
 +++
 
-# Environnement de developpement
-
 ## Shell
 
 - [Oh My Zsh](https://ohmyz.sh/)

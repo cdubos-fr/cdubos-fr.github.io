@@ -2,8 +2,6 @@
 title = "Python"
 +++
 
-# Python
-
 ## Liens
 
 - [Le Blue book](https://lyz-code.github.io/blue-book/)

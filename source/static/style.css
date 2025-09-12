@@ -22,7 +22,7 @@ a { color: var(--color-accent); text-decoration:none; }
 a:hover { text-decoration:underline; }
 
 /* Layout */
-.container { width:100%; max-width: var(--max-w); margin:0 auto; padding:0 1.25rem; }
+.container { width:100%; max-width: var(--max-w); max-width: min(var(--max-w),100%); margin:0 auto; padding:0 1.25rem; }
 .site-header { background:#fff; border-bottom:1px solid var(--color-border); position:sticky; top:0; z-index:10; }
 .flex { display:flex; }
 .between { justify-content:space-between; }
@@ -225,6 +225,32 @@ a:hover { text-decoration:underline; }
 @media (prefers-color-scheme: dark){
   .slice.alt { background: linear-gradient(135deg,#161d1e 0%,#121819 100%); }
   .slice.accent { background: linear-gradient(135deg,#142320 0%,#10201d 100%); }
+}
+
+/* Responsive spécifique parcours & grilles */
+@media (max-width:700px){
+  .pack-layout { grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1.1rem; }
+  .info-box { font-size:.78rem; padding:.85rem .75rem .9rem; }
+  .info-box h4 { font-size:.7rem; }
+}
+@media (max-width:560px){
+  .slice { padding:2.2rem 0 1.9rem; }
+  .timeline { gap:.7rem; }
+  .timeline details { padding:.55rem .65rem .6rem; }
+  .timeline summary { gap:.45rem; font-size:.9rem; }
+  .timeline .period { font-size:.62rem; padding:.22rem .5rem; }
+  .timeline .role { font-size:.9rem; }
+  .timeline .badges span { font-size:.55rem; padding:.22rem .45rem .25rem; }
+  .timeline .body { font-size:.78rem; }
+  .pack-layout { grid-template-columns:1fr; }
+  .process-steps { grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); }
+  .process-steps .step { font-size:.72rem; padding:.75rem .65rem .8rem; }
+}
+@media (max-width:420px){
+  .timeline summary { font-size:.85rem; }
+  .timeline .role { font-size:.82rem; }
+  .info-box { font-size:.74rem; }
+  .process-steps { grid-template-columns:1fr 1fr; }
 }
 
 /* Cartes de synthèse Solutions */

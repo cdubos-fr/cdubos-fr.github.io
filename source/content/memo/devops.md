@@ -2,8 +2,6 @@
 title = "Devops"
 +++
 
-# Devops
-
 ## Liens
 
 - [OWASP](https://owasp.org/)
