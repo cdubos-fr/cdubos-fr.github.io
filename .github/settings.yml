@@ -1,8 +1,8 @@
 repository:
   name: cdubos-fr.github.io
-  description: site web personelle cdubos.fr
+  description: Site vitrine personnel cdubos.fr (Sphinx + GitHub Actions, sans Nix)
   homepage: https://github.com/cdubos-fr/cdubos-fr.github.io
-  topics: github, probot
+  topics: sphinx, documentation, portfolio, github-pages
   private: false
   has_issues: true
   has_projects: false
@@ -32,8 +32,8 @@ branches:
       required_status_checks:
         strict: true
         contexts: [
-          "Check tests",
-          "Check build",
+          "CI / lint-and-typecheck",
+          "CI / build-docs",
         ]
       enforce_admins: true
       required_linear_history: true
