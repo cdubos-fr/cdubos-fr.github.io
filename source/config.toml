@@ -1,15 +1,28 @@
 base_url = "https://cdubos.fr/"
-compile_sass = false
+title = "Clément Dubos"
+description = "Développeur, Architecte web et logiciel, basé dans l'Aude. J'étudie vos problématiques afin de vous offrir la meilleur solutions sur mesure, en fonction de vos moyens."
+author = "Clément Dubos"
+
+# Configuration du thème et de la langue
 default_language = "fr"
-minify_html = true
 generate_feeds = false
-build_search_index = false
+compile_sass = true
+minify_html = true
+build_search_index = true
 
+# Configuration Markdown
 [markdown]
-highlight_code = true
+render_emoji = true
+external_links_target_blank = true
+external_links_no_follow = true
+external_links_no_referrer = true
+smart_punctuation = true
 
-[extra]
-brand_name = "Clément Dubos"
-brand_tagline = "Solutions numériques pour les professionnels de l’Aude"
-contact_email = "contact@cdubos.fr"
-region = "Aude / Carcassonne & Remote"
+[markdown.highlighting]
+light_theme = "github-light"
+dark_theme = "github-dark"
+
+# Configuration des liens
+[link_checker]
+internal_level = "error"
+external_level = "warn"
