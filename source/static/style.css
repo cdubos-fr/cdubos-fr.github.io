@@ -20,15 +20,29 @@
   --bulma-primary-l: 55%;
   --bulma-link: var(--color-primary);
   --bulma-text: var(--color-text);
+  --bulma-text-strong: var(--color-primary-dark);
 }
 
+
+/* Alternance automatique des backgrounds sur les sections principales */
+header > section, main > div >  .section:nth-of-type(even) {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-bg) 60%, var(--color-bg) 100%);
+}
+body > div > section.section:nth-of-type(odd) {
+  background: var(--color-bg);
+}
 @media (prefers-color-scheme: dark){
   :root {
     --color-bg: #141414;
     --color-text: #f5f0ea;
     --background-color: var(--color-bg);
+    --bulma-text-strong: var(--color-accent);
   }
 
+/* Alternance automatique des backgrounds sur les sections principales */
+  header > section, main > div > .section:nth-of-type(even) {
+    background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-primary-dark) 60%, var(--color-primary-dark) 100%);
+  }
 }
 
 * { box-sizing: border-box; margin:0; padding:0; }
@@ -42,14 +56,6 @@ body {
   border-left-color: var(--color-primary);
   border-left-width: 4px;
   border-left-style: solid;
-}
-
-/* Alternance automatique des backgrounds sur les sections principales */
-header > section, main > div > section.section:nth-of-type(even) {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-bg) 60%, var(--color-bg) 100%);
-}
-body > div > section.section:nth-of-type(odd) {
-  background: var(--color-bg);
 }
 
 /* Watermark logo réutilisable */

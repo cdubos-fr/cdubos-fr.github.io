@@ -95,12 +95,13 @@
     </main>
 
     <!-- Footer simple -->
+    {% set mention = get_page(path="mentions-legales.md") %}
     <footer class="footer is-watermark-logo">
         <div class="container">
             <div class="content has-text-centered">
                 <p>&copy; {{ now() | date(format="%Y") }} {{ config.title }}. Tous droits réservés.</p>
                 <p>
-                    <a href="/mentions-legales/">Mentions légales</a>
+                    <a href="{{ get_url(path=mention.path) }}">Mentions légales</a>
                 </p>
             </div>
         </div>
