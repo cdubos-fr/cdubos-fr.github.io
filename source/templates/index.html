@@ -11,30 +11,28 @@
 {% block twitter_description %}{{ section.description | default(value=config.description) }}{% endblock twitter_description %}
 {% block twitter_url %}{{ get_url(path=section.path) }}{% endblock twitter_url %}
 
-{% block content %}
 
-{% set solutions = get_section(path="solutions/_index.md") %}
-{% set parcours = get_section(path="parcours/_index.md") %}
-{% set references = get_section(path="references/_index.md") %}
-{% set about = get_section(path="about/_index.md") %}
-{% set contact = get_page(path="contact.md") %}
-
-<header>
-    <section class="hero is-bold has-background-blur is-watermark-logo">
-        <div class="hero-body">
-            <div class="container">
-                <h1 class="title is-2">Solutions numériques pour les professionnels de l’Aude</h1>
-                <p class="subtitle is-5">Maintenance, automatisation, tableaux de bord : gagnez du temps et clarifiez vos décisions.</p>
-                <div class="buttons">
-                    <a href="{{ get_url(path=contact.path) }}" class="button is-primary">Discuter de votre besoin</a>
-                    <a href="{{ get_url(path=solutions.path) }}" class="button is-primary is-outlined">Voir les solutions</a>
-                </div>
+{% block header %}
+<section class="hero is-bold section is-watermark-logo">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title is-2">Solutions numériques pour les professionnels</h1>
+            <p class="subtitle is-5">Maintenance, automatisation, tableaux de bord : gagnez du temps et clarifiez vos décisions.</p>
+            <div class="buttons">
+                <a href="{{ get_url(path=contact.path) }}" class="button is-primary">Discuter de votre besoin</a>
             </div>
         </div>
-    </section>
-</header>
+    </div>
+</section>
+{% endblock header %}
 
-<section class="section has-background-alt">
+{% block content %}
+
+{% set parcours = get_section(path="parcours/_index.md") %}
+{% set references = get_section(path="references/_index.md") %}
+{% set contact = get_page(path="contact.md") %}
+
+<section class="section">
     <div class="container">
         <h2 class="title is-3">Mes offres</h2>
         <div class="columns is-multiline">
@@ -94,7 +92,7 @@
     </div>
 </section>
 
-<section class="section has-background-blur">
+<section class="section">
     <div class="container">
         <h2 class="title is-3">Pourquoi travailler avec moi&nbsp;?</h2>
         <div class="columns is-multiline is-justify-content-center">
@@ -114,7 +112,7 @@
     </div>
 </section>
 
-<section class="section has-background-alt">
+<section class="section">
     <div class="container">
         <h2 class="title is-3">Ils ont appréciés l'expérience</h2>
         <blockquote class="box has-border-left-color">
@@ -124,7 +122,7 @@
     </div>
 </section>
 
-<section class="section has-background-blur">
+<section class="section">
     <div class="box container has-text-centered">
         <h2 class="has-text-weight-bold is-size-3">Prendre contact</h2>
         <p>Un besoin concret ? Je vous réponds sous 24h ouvrées.</p>

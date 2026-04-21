@@ -48,6 +48,7 @@
     <link rel="stylesheet" href="{{ get_url(path="style.css", cachebust=true) }}">
 
     {% block extra_head %}{% endblock extra_head %}
+    <style>{% block style %}{% endblock style %}</style>
 </head>
 
 <body>
@@ -67,29 +68,29 @@
             </div>
 
             {% set index = get_section(path="_index.md") %}
-            {% set about = get_section(path="about/_index.md") %}
             {% set parcours = get_section(path="parcours/_index.md") %}
             {% set references = get_section(path="references/_index.md") %}
-            {% set solutions = get_section(path="solutions/_index.md") %}
             {% set contact = get_page(path="contact.md") %}
 
             <div id="mainNav" class="navbar-menu" :class="{ 'is-active': isActive }">
                 <div class="navbar-end">
                     <a class="navbar-item" href="{{ get_url(path=index.path) }}">{{ index.title }}</a>
-                    <a class="navbar-item" href="{{ get_url(path=solutions.path) }}">{{ solutions.title }}</a>
                     <a class="navbar-item" href="{{ get_url(path=parcours.path) }}">{{ parcours.title }}</a>
                     <a class="navbar-item" href="{{ get_url(path=references.path) }}">{{ references.title }}</a>
-                    <a class="navbar-item" href="{{ get_url(path=about.path) }}">{{ about.title }}</a>
                     <a class="navbar-item"><a href="{{ get_url(path=contact.path) }}" class="button is-primary is-small is-outlined">{{ contact.title }}</a></a>
                 </div>
             </div>
         </div>
     </nav>
 
+    <header>
+        {% block header %}{% endblock header %}
+    </header>
+
     <!-- Contenu principal -->
     <main class="section">
         <div class="container">
-            {% block content %}{% endblock content %}
+    {% block content %}{% endblock content %}
         </div>
     </main>
 
