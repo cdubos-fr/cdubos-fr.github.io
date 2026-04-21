@@ -4,8 +4,6 @@ description: "Informations légales du site CDubos.fr"
 template: "page.html"
 ---
 
-# Mentions légales
-
 **Dernière mise à jour : 21 Avril 2026**
 
 Conformément à la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l’économie numérique, il est précisé aux utilisateurs du site https://cdubos.fr l’identité des différents intervenants dans le cadre de sa réalisation et de son suivi.
