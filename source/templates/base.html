@@ -1,90 +1,113 @@
-{# Détermination robuste du contexte courant pour éviter l'évaluation à true/false #}
-{% if page %}
-  {% set current = page %}
-  {% set title = page.title %}
-  {% set meta_description = page.description | default(value=config.extra.brand_tagline) %}
-{% elif section %}
-  {% set current = section %}
-  {% set title = section.title %}
-  {% set meta_description = section.description | default(value=config.extra.brand_tagline) %}
-{% else %}
-  {% set current = None %}
-  {% set title = config.extra.brand_name %}
-  {% set meta_description = config.extra.brand_tagline %}
-{% endif %}
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>{{ title }} - {{ config.extra.brand_tagline }}</title>
-  <meta name="description" content="{{ meta_description }}" />
-  <link rel="canonical" href="{{ (page and page.permalink) or (section and section.permalink) }}" />
-  {% if current and current.extra and current.extra.noindex %}
-  <meta name="robots" content="noindex,nofollow" />
-  {% else %}
-  <meta name="robots" content="index,follow" />
-  {% endif %}
-  <!-- Open Graph -->
-  <meta property="og:title" content="{{ title }}" />
-  <meta property="og:description" content="{{ meta_description }}" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="{{ (page and page.permalink) or (section and section.permalink) }}" />
-  <meta property="og:locale" content="fr_FR" />
-  <meta property="og:image" content="https://cdubos.fr/og-image.png" />
-  <meta name="twitter:image" content="https://cdubos.fr/og-image.png" />
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="{{ title }}" />
-  <meta name="twitter:description" content="{{ meta_description }}" />
-  <link rel="icon" href="/favicon-32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
-  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
-  <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png" />
-  <link rel="stylesheet" href="/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %} - {{config.title}}</title>
+    <meta name="description" content="{% block description %}{% endblock description %}">
+    <meta name="author" content="{{ config.author }}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{% block og_url %}{% endblock og_url %}">
+    <meta property="og:title" content="{% block og_title %}{% endblock og_title %} - {{ config.title }}">
+    <meta property="og:description" content="{% block og_description %}{% endblock og_description %}">
+    <meta property="og:image" content="{% block og_image %}{{ get_url(path='og-image.png') }}{% endblock og_image %}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{% block twitter_url %}{% endblock twitter_url %}">
+    <meta property="twitter:title" content="{% block twitter_title %}{% endblock twitter_title %}">
+    <meta property="twitter:description" content="{% block twitter_description %}{% endblock twitter_description %}">
+    <meta property="twitter:image" content="{% block twitter_image %}{{ get_url(path='og-image.png') }}{% endblock twitter_image %}">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "DéveloppeurIndépendant",
+        "name": "{{ config.title }}",
+        "description": "{{ config.description }}",
+        "url": "{{ config.base_url }}",
+        "image": "{{ get_url(path='logo.svg') }}",
+        "memberOf": [
+            {
+                "@type": "Collectif",
+                "name": "Dev'Oc"
+            }
+        ]
+    }
+    </script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="{{ get_url(path="favicon.svg") }}">
+
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ get_url(path="style.css", cachebust=true) }}">
+
+    {% block extra_head %}{% endblock extra_head %}
+    <style>{% block style %}{% endblock style %}</style>
 </head>
+
 <body>
-<header class="site-header">
-  <div class="container flex between center-v">
-    <a class="logo" href="/">
-      <img src="/logo.svg" alt="{{ config.extra.brand_name }}" width="34" height="34" class="logo-mark" />
-      <span class="logo-text">{{ config.extra.brand_name }}</span>
-    </a>
-  <nav class="main-nav" aria-label="Navigation principale">
-      <a href="/solutions/">Solutions</a>
-      <a href="/parcours/">Parcours</a>
-      <a href="/references/">Références</a>
-      <a href="/about/">À propos</a>
-      <a href="/contact/" class="btn btn-sm btn-outline">Contact</a>
+    <!-- Navbar simple avec Bulma -->
+    <nav class="navbar" role="navigation" aria-label="main navigation" x-data="{ isActive: false }">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="/">
+                    <img src="{{ get_url(path="logo.svg") }}" alt="{{ config.title }}" width="34" height="34" style="margin-right:0.5rem;" />
+                    <span>{{ config.title }}</span>
+                </a>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="mainNav" @click="isActive = !isActive">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            {% set index = get_section(path="_index.md") %}
+            {% set parcours = get_section(path="parcours/_index.md") %}
+            {% set references = get_section(path="references/_index.md") %}
+            {% set contact = get_page(path="contact.md") %}
+
+            <div id="mainNav" class="navbar-menu" :class="{ 'is-active': isActive }">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="{{ get_url(path=index.path) }}">{{ index.title }}</a>
+                    <a class="navbar-item" href="{{ get_url(path=parcours.path) }}">{{ parcours.title }}</a>
+                    <a class="navbar-item" href="{{ get_url(path=references.path) }}">{{ references.title }}</a>
+                    <a class="navbar-item"><a href="{{ get_url(path=contact.path) }}" class="button is-primary is-small is-outlined">{{ contact.title }}</a></a>
+                </div>
+            </div>
+        </div>
     </nav>
-  </div>
-</header>
-<main class="site-main">
-  {% block content %}{% endblock content %}
-</main>
-<footer class="site-footer">
-  <div class="container grid-footer">
-    <div>
-      <strong>{{ config.extra.brand_name }}</strong><br/>
-      {{ config.extra.region }}<br/>
-      <a href="mailto:{{ config.extra.contact_email }}">{{ config.extra.contact_email }}</a>
-    </div>
-    <div>
-      <h4>Navigation</h4>
-      <ul>
-        <li><a href="/solutions/">Solutions</a></li>
-        <li><a href="/parcours/">Parcours</a></li>
-        <li><a href="/references/">Références</a></li>
-        <li><a href="/about/">À propos</a></li>
-        <li><a href="/contact/">Contact</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Mentions</h4>
-  <p>© {{ now() | date(format="%Y") }} {{ config.extra.brand_name }}. Tous droits réservés.</p>
-    </div>
-  </div>
-</footer>
+
+    <header>
+        {% block header %}{% endblock header %}
+    </header>
+
+    <!-- Contenu principal -->
+    <main class="section">
+        <div class="container">
+    {% block content %}{% endblock content %}
+        </div>
+    </main>
+
+    <!-- Footer simple -->
+    {% set mention = get_page(path="mentions-legales.md") %}
+    <footer class="footer is-watermark-logo">
+        <div class="container">
+            <div class="content has-text-centered">
+                <p>&copy; {{ now() | date(format="%Y") }} {{ config.title }}. Tous droits réservés.</p>
+                <p>
+                    <a href="{{ get_url(path=mention.path) }}">Mentions légales</a>
+                </p>
+            </div>
+        </div>
+
+    </footer>
+
+    {% block extra_js %}{% endblock extra_js %}
 </body>
 </html>

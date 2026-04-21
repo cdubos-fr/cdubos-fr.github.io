@@ -1,25 +1,45 @@
 {% extends "base.html" %}
+
+{% block title %}{{ section.title | default(value=config.title) }}{% endblock title %}
+{% block description %}{{ section.description | default(value=config.description) }}{% endblock description%}
+
+{% block og_title %}{{ section.title | default(value=config.title) }}{% endblock og_title %}
+{% block og_description %}{{ section.description | default(value=config.description) }}{% endblock og_description %}
+{% block og_url %}{{ get_url(path=section.path) }}{% endblock og_url %}
+
+{% block twitter_title %}{{ section.title | default(value=config.title) }}{% endblock twitter_title %}
+{% block twitter_description %}{{ section.description | default(value=config.description) }}{% endblock twitter_description %}
+{% block twitter_url %}{{ get_url(path=section.path) }}{% endblock twitter_url %}
+
+
+{% block header %}
+<section class="section">
+  <div class="container">
+      <h1 class="title is-2">{{ section.title }}</h1>
+      {% if section.description %}<p class="subtitle is-5">{{ section.description }}</p>{% endif %}
+  </div>
+</section>
+{% endblock header %}
+
 {% block content %}
-<section class="section container">
-  <header>
-    <h1>{{ section.title }}</h1>
-    {% if section.description %}<p class="page-desc">{{ section.description }}</p>{% endif %}
-  </header>
-  <div class="section-body">
-    {{ section.content | safe }}
-    {% if section.pages or section.subsections %}
-    <div class="child-pages">
-      <ul>
-        {% for p in section.pages %}
-          <li><a href="{{ p.permalink }}">{{ p.title }}</a>{% if p.description %} – <span class="muted">{{ p.description }}</span>{% endif %}</li>
-        {% endfor %}
-        {% for s in section.subsections %}
-          {% set sub = get_section(path=s) %}
-          <li><a href="{{ sub.permalink }}">{{ sub.title }}</a>{% if sub.description %} – <span class="muted">{{ sub.description }}</span>{% endif %}</li>
-        {% endfor %}
-      </ul>
+<section class="section">
+  <div class="container">
+    <div class="content">
+      {{ section.content | safe }}
+      {% if section.pages or section.subsections %}
+      <div class="box">
+        <ul>
+          {% for p in section.pages %}
+            <li><a href="{{ p.permalink }}">{{ p.title }}</a>{% if p.description %} – <span class="has-text-grey">{{ p.description }}</span>{% endif %}</li>
+          {% endfor %}
+          {% for s in section.subsections %}
+            {% set sub = get_section(path=s) %}
+            <li><a href="{{ sub.permalink }}">{{ sub.title }}</a>{% if sub.description %} – <span class="has-text-grey">{{ sub.description }}</span>{% endif %}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
     </div>
-    {% endif %}
   </div>
 </section>
 {% endblock content %}
