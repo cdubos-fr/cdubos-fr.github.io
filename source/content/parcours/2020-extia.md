@@ -5,6 +5,7 @@ date = 2020-03-01
 
 _Période : Décembre 2020 - Juillet 2023_
 
+**Organisation :**
 - **Role :** Lead Comet’ Développement
 
 **Mission :** Animation et structuration de la communauté des développeurs au sein de

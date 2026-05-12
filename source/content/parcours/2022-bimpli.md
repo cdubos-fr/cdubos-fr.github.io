@@ -5,28 +5,27 @@ date = 2022-08-01
 
 _Période : Août 2022 – Avril 2023_
 
-- **Technologies :** Python 3.9, Pydantic, AWS, Pulumi, GitHub Actions (CI/CD), Docker.
+**Organisation :**
 - **Équipe :** 1 Scrum Master, 1 Lead Tech, 2 Développeurs.
 - **Rôle :** Lead Tech.
+- **Méthode :** Agile / Scrum.
 
-**Contexte :** Bimpli souhaitait centraliser et homogénéiser la manipulation des données entre
-ses différentes filiales via un système de référentiel unique. Le projet s'inscrivait dans une
-démarche de modernisation technique.
+**Stack Technique :**
+- **Langage & Core :** Python 3.9, Pydantic, AWS Lambda.
+- **Data & Middleware :** SQLModel, Alembic, Kafka.
+- **Interfaces :** Typer, FastAPI.
+- **Infra & Ops :** Github Action, Docker, AWS, Pulumi.
+- **Developer Experience :** MyPy, Pytest, Bandit, Pre-Commit, Black, Flake8.
 
-**Mission :** Pilotage technique de l'équipe, définition des standards de développement et mise
-en place de l'infrastructure Cloud.
+**Contexte :** Bimpli est à l'origine une filiale du groupe BPCE spécialisée dans les avantages salariés, rachetée en 2023 par Swile. L'équipe Platform est responsable de la mise à disposition et du maintien en conditions opérationnelles d'une infrastructure Cloud robuste, sécurisée et automatisée pour l'ensemble des services de la fintech.
+
+**Mission :** Pilotage technique de l'équipe, définition des standards de développement moderne sur un historique "legacy", et déploiement de l'infrastructure Cloud.
 
 **Réalisations :**
-- **Industrialisation :** Refactorisation complète du code existant et mise en place de
-standards de qualité (Linters, tests unitaires, architecture modulaire).
-- **DevOps & IaC :** Conception et déploiement de la CI/CD via GitHub Actions et
-gestion de l'infrastructure AWS avec Pulumi.
-- **Architecture & Delivery :** Définition des choix techniques structurants, rédaction
-des User Stories techniques et implémentation des modules critiques du système.
-- **Management de proximité :** Encadrement de l'équipe de développement. Rôle de
-"proxy" et de "fusible" vis-à-vis du management et du Scrum Master pour isoler
-l'équipe des frictions organisationnelles et garantir la sérénité du delivery.
+- **Industrialisation & Refactoring :** Refonte globale du code existant pour atteindre les standards de qualité actuels (Architecture modulaire, typage strict, couverture de tests).
+- **Architecture Data :** Implémentation du modèle de données via SQLModel et intégration avec Kafka pour assurer la synchronisation des événements entre filiales.
+- **DevOps & IaC :** Mise en place d'une infrastructure robuste sur AWS gérée par Pulumi, avec une automatisation complète des déploiements via GitHub Actions.
+- **Leadership & Protection d'équipe :** Encadrement des développeurs et rôle de "bouclier technique" vis-à-vis du management. Gestion des frictions organisationnelles pour maintenir un rythme de delivery serein.
+- **Gestion de Transition :** Rédaction des spécifications techniques et accompagnement de l'équipe lors de la phase de rachat par Swile, jusqu'à l'interruption stratégique du projet.
 
-**Problème rencontré :** Difficultés de communication avec la gestion de projet (Scrum
-Master) et confrontation à des pratiques de développement legacy. Le projet a finalement
-été interrompu suite au rachat de l'entreprise par Swile.
+**Difficultés rencontrées :** Difficultés de communication avec la gestion de projet (Scrum Master) et confrontation à des pratiques de développement legacy.
