@@ -1,4 +1,5 @@
 +++
-title = "Articles & Présentations"
-description = "Sélection de supports publics (recherche, pratiques d'ingénierie, data) illustrant mes domaines d'intervention et ma pédagogie."
+title = "Articles de blog & Présentations"
+description = "Sélection de supports publics illustrant mes domaines d'intervention et ma pédagogie."
+weight = 3
 +++
